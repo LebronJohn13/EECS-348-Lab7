@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="number">Enter a number:</label>
+        <input type="number" name="number" id="number" required>
+        <button type="submit">Generate Table</button>
+    </form>
+    <?php include 'practice4.php' ?>
+    
+</body>
+</html>
