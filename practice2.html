@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful Paragraph</title>
+    <style>
+        #myParagraph {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        
+        .slider-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colorful Paragraph</h1>
+    <p id="myParagraph">Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.</p>
+    
+    <label for="colorInput">RGB Values (Hexadecimal (#FF5733)):</label>
+    <input type="text" id="colorInput" placeholder="Enter RGB values">
+    
+    <div class="slider-container">
+        <label for="borderWidthInput">Border Width:</label>
+        <input type="range" id="borderWidthInput" min="0" max="10" step="1" value="1">
+    </div>
+    
+    <script>
+        const colorInput = document.getElementById('colorInput');
+        const borderWidthInput = document.getElementById('borderWidthInput');
+        const myParagraph = document.getElementById('myParagraph');
+        
+        colorInput.addEventListener('input', () => {
+            const color = colorInput.value;
+            myParagraph.style.color = color;
+            myParagraph.style.borderColor = color;
+        });
+        
+        borderWidthInput.addEventListener('input', () => {
+            const borderWidth = borderWidthInput.value;
+            myParagraph.style.borderWidth = `${borderWidth}px`;
+        });
+    </script>
+</body>
+</html>
